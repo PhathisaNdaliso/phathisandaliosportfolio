@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+/* 
+  MIDNIGHT & EMBER Design System
+  A high-contrast, brutalist-inspired portfolio theme
+  Primary: Absolute Black + Vibrant Orange + Pure White
+*/
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --brand-black: 0 0% 0%;
+    --brand-white: 0 0% 100%;
+    --brand-orange: 16 100% 50%;
+    --brand-gray: 220 9% 46%;
+    
+    /* Semantic Mappings */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 220 9% 60%;
+
+    --accent: 16 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 16 100% 50%;
+
+    --radius: 0rem;
+
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 16 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 16 100% 50%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 16 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 220 9% 60%;
+    --accent: 16 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 16 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  /* Marquee Animation */
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+
+  /* Typing cursor animation */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  /* Glow effect for accent elements */
+  .glow-orange {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+  }
+
+  /* Mix blend difference for navigation */
+  .nav-blend {
+    mix-blend-mode: difference;
+  }
+}
+
+@layer components {
+  /* Hero button variant */
+  .btn-hero {
+    @apply inline-flex items-center gap-2 bg-foreground text-background font-bold px-8 py-4 uppercase tracking-widest text-sm transition-all duration-300;
+  }
+
+  .btn-hero:hover {
+    @apply bg-primary text-foreground;
+  }
+
+  /* Orange primary button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold px-6 py-3 uppercase tracking-wider text-sm transition-all duration-300;
+  }
+
+  .btn-primary:hover {
+    @apply bg-foreground text-background;
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply border border-foreground text-foreground px-6 py-3 uppercase tracking-wider text-sm transition-all duration-300;
+  }
+
+  .btn-outline:hover {
+    @apply bg-foreground text-background;
+  }
+
+  /* Section styling */
+  .section-container {
+    @apply py-24 px-6 md:px-12 lg:px-20;
+  }
+
+  .section-title {
+    @apply text-5xl md:text-7xl font-serif mb-16;
+  }
+
+  /* Card styling */
+  .card-dark {
+    @apply bg-card border border-border p-8 md:p-12 transition-all duration-500;
+  }
+
+  .card-dark:hover {
+    @apply border-primary/50;
+  }
+
+  /* Tag styling */
+  .tag {
+    @apply px-3 py-1.5 bg-secondary border border-border rounded text-sm text-muted-foreground transition-all duration-300;
+  }
+
+  .tag:hover {
+    @apply text-foreground border-primary;
+  }
+
+  .tag-orange {
+    @apply text-primary text-xs font-mono uppercase tracking-widest border border-primary/30 px-3 py-1 rounded-full;
+  }
+}
