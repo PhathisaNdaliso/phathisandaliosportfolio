@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
       <div className="relative pt-12 md:pt-20">
         <div className="flex justify-center overflow-hidden">
           <h1 className="text-[25vw] md:text-[20vw] font-serif font-bold leading-none tracking-tighter text-foreground opacity-100 select-none">
-            NDALISO
+            PHATHISA
           </h1>
         </div>
       </div>
