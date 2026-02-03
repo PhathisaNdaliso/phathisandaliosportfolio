@@ -51,8 +51,8 @@ const Hero: React.FC = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/Phathisa_Ndaliso_CV.pdf';
-    link.download = 'Phathisa_Ndaliso_CV.pdf';
+    link.href = '/Phathisa_Ndaliso_2025_Candidate_CV_V2.pdf';
+    link.download = 'Phathisa_Ndaliso_2025_Candidate_CV_V2.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
