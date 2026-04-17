@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
     impact: 'Delivered a complete booking, payment, and management solution.',
     links: {
       demo: '#',
-      github: '#',
+      github: 'https://github.com/Crown-Coders/smart-booking-system.git',
     },
   },
   {
