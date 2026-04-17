@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     impact: 'Streamlined issue tracking and resolution workflows.',
     links: {
       demo: '#',
-      github: '#',
+      github: 'https://github.com/nqobilemagwaza6/Ticket-Management-System.git',
     },
   },
   {
