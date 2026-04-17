@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
     impact: 'Streamlined issue tracking and resolution workflows.',
     links: {
       demo: '#',
-      github: '#',
+      github: 'https://github.com/nqobilemagwaza6/Ticket-Management-System.git',
     },
   },
   {
@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
     impact: 'Delivered a complete booking, payment, and management solution.',
     links: {
       demo: '#',
-      github: '#',
+      github: 'https://github.com/Crown-Coders/smart-booking-system.git',
     },
   },
   {
